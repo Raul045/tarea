@@ -28,3 +28,6 @@ Route::get("/comentarios/{id?}", "API\ComentarioController@mostrar")->where("id"
 Route::post("/comentarios","API\ComentarioController@guardarC");
 Route::put("/comentarios/{id?}","API\ComentarioController@CambiarCom")->where("id","[0-9]+");
 Route::delete("/comentarios/{id?}","API\ComentarioController@EliminarCom")->where("id","[0-9]+");
+
+/*Comentarios * Productos*/
+Route::get("productos/{id}/comentarios","API\ComentarioController@obtenerCP")->where("id","[0-9]+");

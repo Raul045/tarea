@@ -41,4 +41,8 @@ class ComentarioController extends Controller
 
         return response()->json(["comentarios"=>Comentarios::all()],200);
     }
+    public function obtenerCP($id){
+        $cp = Comentarios::where('producto_id',$id)->get();
+        return response()->json($cp);
+    }
 }
