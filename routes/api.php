@@ -26,5 +26,5 @@ Route::delete("/productos/{id?}", "API\ProductoController@Eliminar")->where("id"
 /*Apartado para los comentarios*/
 Route::get("/comentarios/{id?}", "API\ComentarioController@mostrar")->where("id","[0-9]+");
 Route::post("/comentarios","API\ComentarioController@guardarC");
-Route::put("/comentarios/{id?}","API\ComentarioController@guardarC")->where("id","[0-9]+");
-Route::delete("/comentarios/{id?}","API\ComentarioController@guardarC")->where("id","[0-9]+");
+Route::put("/comentarios/{id?}","API\ComentarioController@CambiarCom")->where("id","[0-9]+");
+Route::delete("/comentarios/{id?}","API\ComentarioController@EliminarCom")->where("id","[0-9]+");
